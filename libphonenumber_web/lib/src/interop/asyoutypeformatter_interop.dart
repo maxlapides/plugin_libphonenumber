@@ -1,7 +1,6 @@
 part of 'libphonenumber_interop.dart';
 
 @JS('AsYouTypeFormatter')
-@staticInterop
 class AsYouTypeFormatterJsImpl {
   external AsYouTypeFormatterJsImpl(String regionCode);
 

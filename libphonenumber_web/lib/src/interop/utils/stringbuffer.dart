@@ -6,7 +6,6 @@ library stringbuffer;
 import 'dart:js_interop';
 
 @JS('StringBuffer')
-@staticInterop
 class StringBufferJsImpl {
   external StringBufferJsImpl(dynamic optA1, [dynamic varArgs = '']);
 
