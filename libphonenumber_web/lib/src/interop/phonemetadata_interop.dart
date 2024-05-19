@@ -1,6 +1,7 @@
 part of 'libphonenumber_interop.dart';
 
 @JS('NumberFormat')
+@staticInterop
 class NumberFormatJsImpl {
   @JS('getPattern')
   external String getPattern();
@@ -112,6 +113,7 @@ class NumberFormatJsImpl {
 }
 
 @JS('PhoneNumberDesc')
+@staticInterop
 class PhoneNumberDescJsImpl {
   @JS('getNationalNumberPattern')
   external String getNationalNumberPattern();
@@ -193,6 +195,7 @@ class PhoneNumberDescJsImpl {
 }
 
 @JS('PhoneMetadata')
+@staticInterop
 class PhoneMetadataJsImpl {
   @JS('getGeneralDesc')
   external PhoneNumberDescJsImpl getGeneralDesc();
@@ -760,6 +763,7 @@ class PhoneMetadataJsImpl {
 }
 
 @JS('PhoneMetadataCollection')
+@staticInterop
 class PhoneMetadataCollectionJsImpl {
   @JS('getMetadata')
   external PhoneMetadataJsImpl getMetadata(int index);

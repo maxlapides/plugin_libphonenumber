@@ -1,6 +1,7 @@
 part of 'libphonenumber_interop.dart';
 
 @JS('PhoneNumber')
+@staticInterop
 class PhoneNumberJsImpl {
   @JS('getCountryCode')
   external int getCountryCode();

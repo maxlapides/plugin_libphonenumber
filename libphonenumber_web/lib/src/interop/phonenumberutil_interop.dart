@@ -1,6 +1,7 @@
 part of 'libphonenumber_interop.dart';
 
 @JS('PhoneNumberUtil')
+@staticInterop
 class PhoneNumberUtilJsImpl {
   external PhoneNumberUtilJsImpl._();
 

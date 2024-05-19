@@ -1,6 +1,7 @@
 part of 'libphonenumber_interop.dart';
 
 @JS('ShortNumberInfo')
+@staticInterop
 class ShortNumberInfoJsImpl {
   @JS('getInstance')
   external static ShortNumberInfoJsImpl getInstance();
