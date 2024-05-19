@@ -22,6 +22,7 @@
 ///   NATIONAL: 2,
 ///   RFC3966: 3
 /// };
+library;
 
 enum PhoneNumberFormat {
   E164(value: 0), //: 0,

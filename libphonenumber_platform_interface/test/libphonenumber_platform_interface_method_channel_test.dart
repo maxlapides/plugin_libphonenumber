@@ -10,7 +10,8 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   setUp(() {
-    channel.setMockMethodCallHandler((MethodCall methodCall) async {
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(channel, (methodCall) async {
       switch (methodCall.method) {
         case 'formatAsYouType':
           return '+234 808 012 3456';
@@ -31,11 +32,13 @@ void main() {
         case 'getFormattedExampleNumber':
           return '+234 808 012 3456';
       }
+      return null;
     });
   });
 
   tearDown(() {
-    channel.setMockMethodCallHandler(null);
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(channel, null);
   });
 
   test('TEST formatAsYouType', () async {
@@ -65,8 +68,8 @@ void main() {
   });
 
   test('TEST normalizePhoneNumber', () async {
-    final normalizedNumber =
-        await platform.normalizePhoneNumber('+2348080123456', 'NG', PhoneNumberFormat.E164);
+    final normalizedNumber = await platform.normalizePhoneNumber(
+        '+2348080123456', 'NG', PhoneNumberFormat.E164);
 
     expect(normalizedNumber, '+2348080123456');
   });

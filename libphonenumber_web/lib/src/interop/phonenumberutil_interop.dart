@@ -1,4 +1,4 @@
-part of libphonenumber_interop;
+part of 'libphonenumber_interop.dart';
 
 @JS('PhoneNumberUtil')
 class PhoneNumberUtilJsImpl {

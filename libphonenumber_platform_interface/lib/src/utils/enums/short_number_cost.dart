@@ -9,6 +9,7 @@
 ///  PREMIUM_RATE: 2,
 ///  UNKNOWN_COST: 3
 /// };
+library;
 
 enum ShortNumberCost {
   TOLL_FREE(value: 0),
